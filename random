@@ -1,0 +1,31 @@
+from tkinter import *
+from tkinter import messagebox
+from tkinter import messagebox as mb
+
+master = Tk()			
+master.geometry('500x500')
+master['background']='black'
+
+path = r'E:\PY\Snímka obrazovky 2023-05-23 192102'
+
+def slabko():
+    messagebox.showinfo("(:","Slabko")
+
+def Master():
+    button=Button(master,text="Fakt (:",command=master.destroy)
+    button.place(relx=0,x=150,y=50,anchor=E)
+
+def Mastery():
+    button=Button(master,text="Ja to myslim vazne!!!!")
+    button.place(relx=0,x=100,y=50,anchor=E)
+
+
+buton = Button(master, text = 'Si ready?', bd = '15', foreground="red")
+buton.pack(side = 'top')
+button= Button(master,text= "Nie!", command=lambda:[master.destroy(),slabko()])
+button.place(relx=0,x=255,y=70,anchor = W)
+butto=Button(master,text= "Ano!", command=Master)
+butto.place(relx=0,x=210,y=70,anchor = W)
+master.mainloop()
+if button == True:
+    mb.showwarning('Oznam', 'Vas program neocakavane prestal pracovat')
